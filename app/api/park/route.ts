@@ -29,7 +29,8 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ success: true, data: newPark });
-  } catch (err: any) {
-    return NextResponse.json({ error: err.message }, { status: 500 });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "An unknown error occurred";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
