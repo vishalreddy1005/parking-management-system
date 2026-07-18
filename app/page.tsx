@@ -11,7 +11,7 @@ const categories: Record<VehicleType, { slots: number; pricePerHour: number }> =
   TwoWheeler: { slots: 7, pricePerHour: 50 },
 };
 
-const TOTAL_FLOORS = 5; // You can adjust this number
+const TOTAL_FLOORS = 5; // adjust this number
 
 export default function Home() {
   const [vehicleNumber, setVehicleNumber] = useState("");
